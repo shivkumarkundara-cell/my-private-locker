@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Private Locker</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #080d1b, #142b43, #301b43);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px 25px;
+  border: 1px solid #52647c;
+  border-radius: 24px;
+  background: rgba(14, 22, 40, 0.92);
+  box-shadow: 0 20px 60px #0008;
+  text-align: center;
+}
+
+.lock {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #bdc9da;
+  line-height: 1.6;
+}
+
+input, button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+input {
+  border: 1px solid #52647c;
+  background: #101a2b;
+  color: white;
+}
+
+button {
+  border: none;
+  background: linear-gradient(90deg, #00c6ff, #8b5cf6);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 12px;
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="lock">🔐</div>
+    <h1>My Private Locker</h1>
+    <p>Your documents. Your privacy.</p>
+
+    <input
+      type="email"
+      placeholder="Enter your email"
+      autocomplete="email"
+    >
+
+    <button onclick="showMessage()">
+      Get Started →
+    </button>
+
+    <p id="message"></p>
+
+    <p class="note">
+      Your personal document space<br>
+      Private • Secure • Anywhere
+    </p>
+  </main>
+
+<script>
+function showMessage() {
+  document.getElementById("message").textContent =
+    "Welcome! Your locker setup starts here. ❤️";
+}
+</script>
+</body>
+</html>
